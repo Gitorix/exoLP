@@ -1,0 +1,142 @@
+/* Basic Styles & Fonts */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #4c4c4c; /* Dark Gray */
+    background-color: #fdf6f6; /* Pale Pink Background */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+}
+
+.h-style {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+.h-style::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #d4af37; /* Gold Accent */
+}
+
+/* Accent Colors */
+.btn-primary {
+    background-color: #b07d89; /* Dusty Rose */
+    border-color: #b07d89;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #9c6b78;
+    border-color: #9c6b78;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-primary {
+    color: #b07d89 !important;
+}
+
+.bg-primary {
+    background-color: #b07d89 !important;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.nav-link {
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #d4af37; /* Gold Accent on hover */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: linear-gradient(45deg, #b07d89, #eac0c9); /* Pink gradient */
+    background-size: cover;
+    position: relative;
+}
+
+.hero-section::after {
+    /* Removed the dark overlay */
+    display: none;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+.hp-exosome-title {
+    font-size: 4.5rem; /* Even larger */
+    font-weight: 900; /* Extra bold */
+    background: linear-gradient(to right, #FFD700, #000000); /* Gold to Black Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-webkit browsers */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: none; /* Remove previous text shadow */
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+
+/* Features Section */
+.feature-icon {
+    /* Placeholder for actual icons */
+    font-size: 3rem;
+    color: #d4af37; /* Gold Accent */
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08) !important;
+}
+
+#price .card {
+    border: 1px solid #f0e6d2;
+}
+
+#price .card-header {
+    border-bottom: 1px solid #f0e6d2;
+}
+
+
+/* Footer */
+footer {
+    background-color: #4a3b41; /* Dark muted pink/purple */
+}
