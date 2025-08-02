@@ -1,68 +1,138 @@
-
+/* LP Specific Styles */
 body {
-  margin: 0;
-  font-family: "Helvetica Neue", sans-serif;
-  background: linear-gradient(#f5cfd7, #e0aeb9);
-  color: #fff;
-  text-align: center;
+    background-color: #ffffff; /* White background for LP */
 }
 
-.hero {
-  padding: 80px 20px;
+.lp-hero-section {
+    height: 100vh;
+    background-color: #ffffff; /* White background */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #4c4c4c; /* Dark Gray text */
+    overflow: hidden; /* Hide overflowing logo */
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.lp-hero-section .lp-hero-logo {
+    position: absolute;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15vw; /* Responsive size */
+    color: rgba(224, 160, 176, 0.15); /* Light pink, transparent */
+    transform: rotate(-15deg); /* Slight rotation */
+    white-space: nowrap;
+    user-select: none;
+    pointer-events: none;
+    z-index: 0; /* Behind content */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);
 }
 
-.hero h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  color: #fff;
+.lp-hero-section h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    color: #e0a0b0; /* Pink accent for heading */
+    position: relative;
+    z-index: 1;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #fff;
+.lp-hero-section .lead {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
-.cta-button {
-  background-color: #d18899;
-  color: #fff;
-  padding: 14px 28px;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
+.lp-section {
+    padding: 80px 0;
 }
 
-
-@media screen and (max-width: 767px) {
-  .hero h1 {
-    font-size: 6vw;
-    line-height: 1.4;
-    padding: 0 10px;
-    word-break: break-word;
-  }
-
-  .hero h2 {
-    font-size: 4.5vw;
-    line-height: 1.5;
-    padding: 0 10px;
-    word-break: break-word;
-  }
-
-  .hero p {
-    font-size: 3.8vw;
-    line-height: 1.6;
-    padding: 0 10px;
-  }
-
-  .hero .cta-button {
-    font-size: 4vw;
-    padding: 10px 16px;
-  }
+.lp-section.bg-light {
+    background-color: #f8f8f8 !important; /* Slightly off-white for sections */
 }
 
+.lp-section.bg-white {
+    background-color: #ffffff !important;
+}
+
+.h-style {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 2rem;
+}
+
+.h-style::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #e0a0b0; /* Pink accent */
+}
+
+.lp-card-problem {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.lp-card-problem:hover {
+    transform: translateY(-5px);
+}
+
+.lp-feature-icon {
+    font-size: 3.5rem;
+    color: #e0a0b0; /* Pink accent */
+    margin-bottom: 15px;
+}
+
+.lp-price-card .card-header {
+    background-color: #e0a0b0 !important; /* Pink accent */
+    border-bottom: 1px solid #d08090; /* Slightly darker pink */
+}
+
+.lp-price-card .card-body {
+    background-color: #ffffff;
+}
+
+.lp-price-card .card-footer {
+    background-color: #f8f8f8; /* Slightly off-white */
+    border-top: 1px solid #d08090; /* Slightly darker pink */
+}
+
+.btn-primary {
+    background-color: #e0a0b0;
+    border-color: #e0a0b0;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d08090;
+    border-color: #d08090;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.text-primary {
+    color: #e0a0b0 !important;
+}
+
+.lp-exosome-title {
+    font-size: 4.5rem; /* Even larger */
+    font-weight: 900; /* Extra bold */
+    background: linear-gradient(to right, #FFD700, #000000); /* Gold to Black Gradient */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback for non-webkit browsers */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    text-shadow: none; /* Remove previous text shadow */
+}
